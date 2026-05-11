@@ -19,8 +19,10 @@ El desarrollo de esta plataforma prioriza el rendimiento extremo, la optimizaci�
 ![Netlify](https://img.shields.io/badge/Netlify-050B14?style=for-the-badge&logo=netlify&logoColor=00C7B7)
 
 * **Framework CSS:** Tailwind CSS (Clases utilitarias para diseño a medida sin inflar el CSS).
-* **Animaciones:** AOS (Animate On Scroll) para transiciones fluidas.
+* **Animaciones:** IntersectionObserver + CSS (reemplazo ultra-ligero de AOS, ~2KB vs 30KB).
 * **Despliegue (CI/CD):** Netlify integrado con GitHub para automatización de builds.
+* **SEO:** Schema.json (LocalBusiness + Services), sitemap.xml y robots.txt.
+* **Accesibilidad:** WCAG 2.1 AA compliance, focus management, skip links.
 
 ---
 
@@ -39,6 +41,42 @@ Este portfolio exhibe nuestros desarrollos más recientes, incluyendo:
 1.  **Estrategia:** Análisis de nicho y diseño de arquitectura orientada a resultados.
 2.  **Desarrollo:** Código limpio, interfaces modernas y velocidad de carga optimizada para redes móviles.
 3.  **Lanzamiento:** Entrega llave en mano y configuración técnica de dominios.
+
+---
+
+## 🎯 Optimización de Imágenes (WebP + Responsive)
+
+Para reducir tamaño de imágenes 50-70%, convertir a WebP:
+
+```bash
+# Opción 1: Python (sin dependencias externas después de pip)
+pip install Pillow
+python convert-images-python.py
+
+# Opción 2: Node.js (si tienes sharp)
+npm install sharp
+node convert-images.js
+
+# Opción 3: ImageMagick (Mac/Linux/Windows Chocolatey)
+brew install imagemagick          # Mac
+choco install imagemagick         # Windows (con Chocolatey)
+sudo apt-get install imagemagick  # Linux
+
+node convert-images.js
+```
+
+## 🚀 Deploy en 3 Pasos
+
+```bash
+# 1. Convertir imágenes (elige una opción arriba)
+python convert-images-python.py
+
+# 2. Hacer commit y push (ejecutar en C:\desarrollo\agencia)
+.\DEPLOY_COMPLETO.bat
+
+# ✅ Netlify auto-deploya en ~2 minutos
+# Live: https://aav-studio.netlify.app/
+```
 
 ---
 

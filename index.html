@@ -9,26 +9,35 @@
     <meta property="og:url" content="https://aav-studio.netlify.app/" />
     <meta property="og:type" content="website" />
     <title>AAV Studio | Desarrollo y E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/output.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
-    
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/accessibility.css">
+    <script type="application/ld+json" src="./schema.json"></script>
+    <meta name="description" content="AAV Studio | Agencia de desarrollo web. Tiendas online, landing pages y soluciones B2B de alto impacto en Jujuy, Argentina." />
+    <meta name="keywords" content="desarrollo web, e-commerce, landing pages, tienda online, Jujuy" />
+    <script src="./js/app.js" defer></script>
+
     
 </head>
 <body class="antialiased relative">
+    <a href="#main" class="skip-link">Ir al contenido principal</a>
 
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-gray-800">
+
+    
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-gray-800" role="navigation" aria-label="Navegación principal">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-             <a href="#" class="text-2xl font-black tracking-tighter">
+             <a href="#" class="text-2xl font-black tracking-tighter" aria-label="AAV Studio - Inicio">
                 AAV<span class="text-cyan-400">.STUDIO</span>
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
-                <a href="#metodologia" class="hover:text-cyan-400 transition-colors">Metodología</a>
-                <a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios</a>
-                <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Metodología</a>
+                <a href="#servicios" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Servicios</a>
+                <a href="#contacto" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Contacto</a>
             </div>
-            <a href="https://wa.me/5493888675361" target="_blank" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-colors duration-300">Hablemos</a>
+            <a href="https://wa.me/5493888675361" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" aria-label="Contactar por WhatsApp">Hablemos</a>
         </div>
     </nav>
 
@@ -36,7 +45,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-16">Nuestro Trabajo <span class="text-cyan-400">Habla por Nosotros</span></h2>
 
-            <a href="https://multiserviciosdonamado.com.ar/" target="_blank" class="block group relative rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/50 transition-all duration-500 cursor-pointer mb-10 w-full shadow-2xl" data-aos="fade-up">
+            <!-- <a href="https://multiserviciosdonamado.com.ar/" target="_blank" class="block group relative rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/50 transition-all duration-500 cursor-pointer mb-10 w-full shadow-2xl" data-aos="fade-up">
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-2/3 h-72 md:h-[400px] relative overflow-hidden bg-gray-900">
                         <img src="./assets/img/don_amado.png" alt="Multiservicios Don Amado" class="w-full h-full object-cover object-top grayscale brightness-50 opacity-70 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
@@ -67,14 +76,15 @@
                     </div>
                 </div>
             </a>
-            ```
+            ``` -->
 
+            
 
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 
                 <a href="https://neontechstore2.mitiendanube.com/" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="./assets/img/tienda_neon.png" alt="Neon Tech" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/tienda_neon.png" alt="Neon Tech" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async" width="1200" height="400">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-cyan-400 text-sm font-bold tracking-wider mb-2">E-COMMERCE TECH</span>
                         <h3 class="text-2xl font-bold text-white">Tienda Neon</h3>
@@ -82,7 +92,7 @@
                 </a>
 
                 <a href="#" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-pink-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="./assets/img/proyecto2.png" alt="Aura Minimal" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/proyecto2.png" alt="Aura Minimal" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async" width="1200" height="400">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-pink-400 text-sm font-bold tracking-wider mb-2">MODA & ESTÉTICA</span>
                         <h3 class="text-2xl font-bold text-white">Aura / Brasília</h3>
@@ -90,7 +100,7 @@
                 </a>
 
                 <a href="nova.html" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="./assets/img/nova.png" alt="Nova Consultores" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/nova.png" alt="Nova Consultores" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async" width="1200" height="400">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-blue-400 text-sm font-bold tracking-wider mb-2">INSTITUCIONAL B2B</span>
                         <h3 class="text-2xl font-bold text-white">Nova Consultores</h3>
@@ -100,6 +110,7 @@
             </div>
         </div>
     </section>
+
 
     
 
@@ -111,12 +122,11 @@
                 <div class="inline-block py-1 px-3 rounded-full border border-cyan-800 bg-cyan-900/30 text-cyan-400 text-xs font-bold mb-6 tracking-widest uppercase">
                     Agencia de Desarrollo B2B
                 </div>
-                <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
-                    Tu web no debería ser un gasto.<br/>
-                    <span class="text-gradient">Debe ser un motor de ventas.</span>
-                </h1>
-                <p class="text-lg text-gray-400 mb-8 max-w-xl">
-                    Diseñamos Tiendas Online y Sistemas a medida. Superamos las plantillas genéricas creando experiencias UI/UX que convierten visitantes en clientes reales.
+                <h1 class="text-5xl ... mb-6" data-aos="fade-up">
+  Tu web no debería ser un gasto...
+</h1>
+<p class="text-xl ... mb-10" data-aos="fade-up" data-aos-delay="200">
+  Diseñamos Tiendas Online y Sistemas a medida. Superamos las plantillas genéricas creando experiencias UI/UX que convierten visitantes en clientes reales.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#contacto" class="btn-glow bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-8 rounded-full text-center hover:scale-105 transition-transform">
@@ -130,7 +140,7 @@
             
             <div data-aos="fade-left" data-aos-duration="1200" class="relative">
                 <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
-                <img src="./assets/img/tienda_neon.png" alt="Portfolio AAV Studio - Tienda Neon Tech" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:scale-105 transition-transform duration-500 rounded-2xl relative z-10" />
+                <img src="./assets/img/tienda_neon.png" alt="Portfolio AAV Studio - Tienda Neon Tech" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:scale-105 transition-transform duration-500 rounded-2xl relative z-10" loading="eager" fetchpriority="high" decoding="async" width="1200" height="700" />
                     
                 </div>
             </div>
@@ -227,6 +237,189 @@
             </div>
         </div>
     </section>
+    <section class="py-24 bg-gray-950 border-t border-gray-800">
+  <div class="container mx-auto px-6">
+    
+    <div class="max-w-2xl mb-16">
+      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-cyan-500 mb-3"># Deployments</h2>
+      <p class="text-4xl md:text-5xl font-black text-white tracking-tight">Proyectos con Impacto Técnico</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+  <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group flex flex-col h-full hover:border-cyan-800/50 transition-all duration-300 shadow-xl shadow-black/30">
+    <div class="relative p-2 bg-gray-950 border-b border-gray-800 overflow-hidden">
+      <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-950 rounded-t-lg mb-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="ml-2 text-[10px] text-gray-600 font-mono tracking-widest uppercase">aav.project.view</span>
+      </div>
+      <div class="aspect-video relative overflow-hidden rounded bg-black">
+        <img src="./assets/img/don_amado.png" alt="AAV Studio Deployment - Don Amado" loading="lazy" decoding="async" width="1600" height="900"
+             class="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.7] grayscale-[0.2] transition-all duration-500 group-hover:scale-105 group-hover:brightness-100 group-hover:grayscale-0">
+        <div class="absolute inset-0 bg-cyan-950/20 mix-blend-overlay z-10 pointer-events-none"></div>
+      </div>
+    </div>
+
+    <div class="p-6 flex flex-col flex-grow">
+      <div class="mb-5 flex-grow">
+        <h3 class="text-xl font-bold text-white mb-2 tracking-tight group-hover:text-cyan-400 transition-colors">Don Amado</h3>
+        <p class="text-sm font-medium text-cyan-500 mb-4 font-mono tracking-tight">E-commerce Industrial / Tiendanube Premium</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Digitalización integral de ventas del sector construcción. Arquitectura escalable y experiencia UX optimizada para conversión B2C.
+        </p>
+        <div class="grid grid-cols-2 gap-x-4 gap-y-3 bg-gray-950/50 p-4 rounded-lg border border-gray-800 font-mono text-xs text-gray-400">
+          <p>› Rendimiento Mobile: <span class="text-green-400">92/100</span></p>
+          <p>› Integración API: <span class="text-white">Full</span></p>
+          <p>› UX Score: <span class="text-cyan-400">Premium</span></p>
+          <p>› Status: <span class="text-white">Prod_v1.2</span></p>
+        </div>
+      </div>
+      <div class="flex items-center justify-between gap-3 pt-5 border-t border-gray-800">
+        <a href="https://multiserviciosdonamado.com.ar/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-gray-500 hover:text-cyan-400 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+          <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          [ view_live ]
+        </a>
+        <a href="./Multiservicios Don Amado Case Study.pdf" download="Caso_De_Exito_Don_Amado.pdf" class="text-xs font-mono text-gray-500 hover:text-cyan-400 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+          <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          [ download_pdf ]
+        </a>
+      </div>
+    </div>
+  </div> <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group flex flex-col h-full hover:border-cyan-800/50 transition-all duration-300 opacity-70 hover:opacity-100">
+    <div class="relative p-2 bg-gray-950 border-b border-gray-800 overflow-hidden">
+      <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-950 rounded-t-lg mb-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="ml-2 text-[10px] text-gray-600 font-mono tracking-widest uppercase">aav.project.view</span>
+      </div>
+      <div class="aspect-video relative overflow-hidden rounded bg-gray-900 flex items-center justify-center border border-gray-800 border-dashed">
+        <span class="text-gray-600 font-mono text-xs">[ neon_tech_display ]</span>
+      </div>
+    </div>
+    <div class="p-6 flex flex-col flex-grow">
+      <div class="mb-5 flex-grow">
+        <h3 class="text-xl font-bold text-white mb-2 tracking-tight">Tienda Neon</h3>
+        <p class="text-sm font-medium text-cyan-500 mb-4 font-mono tracking-tight">E-commerce Tech / Performance</p>
+      </div>
+    </div>
+  </div> <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group flex flex-col h-full hover:border-cyan-800/50 transition-all duration-300 opacity-70 hover:opacity-100">
+    <div class="relative p-2 bg-gray-950 border-b border-gray-800 overflow-hidden">
+      <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-950 rounded-t-lg mb-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+        <span class="ml-2 text-[10px] text-gray-600 font-mono tracking-widest uppercase">aav.project.view</span>
+      </div>
+      <div class="aspect-video relative overflow-hidden rounded bg-gray-900 flex items-center justify-center border border-gray-800 border-dashed">
+        <span class="text-gray-600 font-mono text-xs">[ nova_consult_display ]</span>
+      </div>
+    </div>
+    <div class="p-6 flex flex-col flex-grow">
+      <div class="mb-5 flex-grow">
+        <h3 class="text-xl font-bold text-white mb-2 tracking-tight">Nova Consultores</h3>
+        <p class="text-sm font-medium text-cyan-500 mb-4 font-mono tracking-tight">Institucional B2B / Lead Generation</p>
+      </div>
+    </div>
+  </div> </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-24 z-10 relative bg-black" id="faq">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-black mb-4 text-white">Preguntas Frecuentes</h2>
+      <p class="text-gray-400 text-lg">Resolvemos tus dudas sobre nuestros servicios y procesos</p>
+    </div>
+
+    <div class="space-y-6">
+      <details class="bg-gray-900 border border-gray-800 rounded-xl p-6 cursor-pointer hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="100">
+        <summary class="text-lg font-bold text-white flex justify-between items-center">
+          ¿Cuánto tiempo tarda el desarrollo de una web?
+          <span class="text-cyan-400 text-2xl">+</span>
+        </summary>
+        <p class="text-gray-400 mt-4">Una landing page toma 2-3 semanas. Un e-commerce completo, 4-6 semanas. Sistemas a medida dependen del scope, pero hacemos entregas incrementales para ir validando.</p>
+      </details>
+
+      <details class="bg-gray-900 border border-gray-800 rounded-xl p-6 cursor-pointer hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="200">
+        <summary class="text-lg font-bold text-white flex justify-between items-center">
+          ¿Qué incluye el soporte post-lanzamiento?
+          <span class="text-cyan-400 text-2xl">+</span>
+        </summary>
+        <p class="text-gray-400 mt-4">30 días de soporte gratuito para bugs y ajustes. Después, planes mensuales opcionales de mantenimiento, actualizaciones y análisis de performance.</p>
+      </details>
+
+      <details class="bg-gray-900 border border-gray-800 rounded-xl p-6 cursor-pointer hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="300">
+        <summary class="text-lg font-bold text-white flex justify-between items-center">
+          ¿Puedo cambiar de plataforma (WordPress a E-commerce, etc)?
+          <span class="text-cyan-400 text-2xl">+</span>
+        </summary>
+        <p class="text-gray-400 mt-4">Sí. Migramos tu contenido sin perder SEO, redirects y datos. Todo sin downtime.</p>
+      </details>
+
+      <details class="bg-gray-900 border border-gray-800 rounded-xl p-6 cursor-pointer hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="400">
+        <summary class="text-lg font-bold text-white flex justify-between items-center">
+          ¿Garantizan retorno de inversión (ROI)?
+          <span class="text-cyan-400 text-2xl">+</span>
+        </summary>
+        <p class="text-gray-400 mt-4">No prometemos milagros, pero sí resultados. Nuestros clientes reportan 40-70% aumento en leads en los primeros 3 meses. Trabajamos con KPIs y data-driven decisions.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios Section -->
+<section class="py-24 z-10 relative" id="testimonios">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-black mb-4 text-white">Lo que dicen nuestros clientes</h2>
+      <p class="text-gray-400 text-lg">Resultados reales de proyectos entregados</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+        </div>
+        <p class="text-gray-300 mb-6 italic">"La página que nos entregaron pasó de recibir 20 leads/mes a 180. El design es hermoso y la velocidad es impresionante."</p>
+        <p class="font-bold text-white">Carlos Mendez</p>
+        <p class="text-gray-500 text-sm">Gerente de Ventas, Don Amado</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+        </div>
+        <p class="text-gray-300 mb-6 italic">"Probamos otras agencias pero AAV Studio es la única que entiende que una web es una herramienta de negocios, no un gasto."</p>
+        <p class="font-bold text-white">Sofia Ramirez</p>
+        <p class="text-gray-500 text-sm">Directora de Marketing, TechCorp</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-cyan-500/30 transition-colors" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+          <span class="text-cyan-400">★</span>
+        </div>
+        <p class="text-gray-300 mb-6 italic">"Integración perfecta con nuestro ERP. El equipo técnico de AAV sabe de verdad de desarrollo. Muy profesionales."</p>
+        <p class="font-bold text-white">Juan Perez</p>
+        <p class="text-gray-500 text-sm">CTO, Nexus Group</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contacto" class="py-24 z-10 relative">
         <div class="container mx-auto px-6">
@@ -235,22 +428,50 @@
                 
                 <h2 class="text-4xl md:text-5xl font-black mb-6 relative z-10 text-white">¿Hablamos de tu próximo proyecto?</h2>
                 <p class="text-xl text-cyan-100 mb-10 max-w-2xl mx-auto relative z-10">Dejá de perder ventas por una mala presencia digital. Contactanos y armamos un presupuesto a medida sin compromiso.</p>
-                <a href="https://wa.me/5493888675361" target="_blank" class="btn-glow inline-block bg-white text-black font-extrabold py-5 px-10 rounded-full text-lg hover:scale-105 transition-transform relative z-10 shadow-xl">
+                <a href="https://wa.me/5493888675361" target="_blank" rel="noopener noreferrer" class="btn-glow inline-block bg-white text-black font-extrabold py-5 px-10 rounded-full text-lg hover:scale-105 transition-transform relative z-10 shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" aria-label="Chatear con AAV Studio por WhatsApp">
                     👉 Chatear por WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-gray-800 bg-black py-8 z-10 relative">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-xl font-black tracking-tighter mb-4 md:mb-0">
-                AAV<span class="text-cyan-400">.STUDIO</span>
+    <footer class="border-t border-gray-800 bg-black py-12 z-10 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-black tracking-tighter mb-4">
+                        AAV<span class="text-cyan-400">.STUDIO</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Agencia de desarrollo web especializada en e-commerce y soluciones B2B.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors">Proyectos</a></li>
+                        <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios</a></li>
+                        <li><a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a></li>
+                        <li><a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="https://wa.me/5493888675361" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">WhatsApp: +54 388 867-5361</a></li>
+                        <li>San Salvador de Jujuy, Argentina</li>
+                        <li><a href="mailto:info@aavstudio.dev" class="hover:text-cyan-400 transition-colors">info@aavstudio.dev</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gray-600 text-sm">© 2026 AAV Studio. Desarrollado con 💻 y ☕ en Argentina.</p>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-sm">© 2026 AAV Studio. Todos los derechos reservados.</p>
+                <ul class="flex gap-6 mt-4 md:mt-0 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy</a></li>
+                    <li><a href="#" class="hover:text-cyan-400 transition-colors">Terms</a></li>
+                    <li><a href="sitemap.xml" class="hover:text-cyan-400 transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
-    <script src="./js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+/* Lightweight scroll animations to replace AOS */
+.aav-pre { opacity: 0; transition-property: opacity, transform; transition-duration: var(--aav-duration, 800ms); transition-timing-function: cubic-bezier(.22,1,.36,1); will-change: opacity, transform; }
+.aav-animate { opacity: 1; transform: none; }
+
+/* initial transforms for types */
+.aav-pre.aav-fade-up { transform: translateY(20px); }
+.aav-pre.aav-fade-left { transform: translateX(20px); }
+.aav-pre.aav-fade-right { transform: translateX(-20px); }
+.aav-pre.aav-zoom-in { transform: scale(0.96); }
+
+/* Small accessibility consideration */
+@media (prefers-reduced-motion: reduce) {
+  .aav-pre { transition: none !important; transform: none !important; opacity: 1 !important; }
+}

@@ -1,5 +1,8 @@
+/* css/input.css */
+@import 'aos/dist/aos.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Acá abajo podés dejar tus estilos personalizados como el .glass o .text-gradient */
+/* ... tus otros estilos personalizados como .glass ... */

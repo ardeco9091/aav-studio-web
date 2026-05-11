@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Consultores | Asesoría Corporativa</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/accessibility.css">
+    <script type="application/ld+json" src="./schema.json"></script>
+    <meta name="description" content="Nova Consultores | Asesoría Corporativa. Soluciones legales, contables y estratégicas para empresas en Jujuy, Argentina." />
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+    <a href="#main" class="skip-link">Ir al contenido principal</a>
 
-    <nav class="bg-white shadow-sm py-6 px-8 flex justify-between items-center fixed w-full top-0 z-50">
-        <div class="text-2xl font-serif font-bold text-slate-900 tracking-wider">NOVA<span class="text-blue-600">.</span></div>
+    <nav class="bg-white shadow-sm py-6 px-8 flex justify-between items-center fixed w-full top-0 z-50" role="navigation" aria-label="Navegación principal">
+        <div class="text-2xl font-serif font-bold text-slate-900 tracking-wider" aria-label="Nova Consultores - Inicio">NOVA<span class="text-blue-600">.</span></div>
         <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-            <a href="#" class="hover:text-blue-600 transition">INICIO</a>
-            <a href="#" class="hover:text-blue-600 transition">SERVICIOS</a>
-            <a href="#" class="hover:text-blue-600 transition">NUESTRO EQUIPO</a>
+            <a href="#hero" class="hover:text-blue-600 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">INICIO</a>
+            <a href="#servicios" class="hover:text-blue-600 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">SERVICIOS</a>
+            <a href="#equipo" class="hover:text-blue-600 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">NUESTRO EQUIPO</a>
         </div>
-        <button class="bg-slate-900 text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-blue-600 transition">
+        <button class="bg-slate-900 text-white px-6 py-2 rounded-sm text-sm font-medium hover:bg-blue-600 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" aria-label="Solicitar asesoría a Nova Consultores">
             SOLICITAR ASESORÍA
         </button>
     </nav>
 
     <section class="mt-20 relative bg-slate-900 text-white">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" alt="Oficina corporativa" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fm=webp&fit=crop&w=1600&q=80" alt="Oficina corporativa" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" decoding="async" width="1600" height="900">
         
         <div class="relative max-w-7xl mx-auto px-8 py-32 lg:py-48 flex flex-col items-start">
             <div class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 mb-6 tracking-widest uppercase rounded-sm">
