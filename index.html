@@ -5,44 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="AAV Studio | Desarrollo Web Premium" />
     <meta property="og:description" content="Impulsamos tu negocio con Tiendas Online y Páginas Web de alto impacto. Transformamos visitas en clientes." />
-    <meta property="og:image" content="https://aav-studio.netlify.app/miniatura.png" />
+    <meta property="og:image" content="https://aav-studio.netlify.app/./assets/img/miniatura.png" />
     <meta property="og:url" content="https://aav-studio.netlify.app/" />
     <meta property="og:type" content="website" />
     <title>AAV Studio | Desarrollo y E-Commerce</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <link rel="stylesheet" href="./css/styles.css">
     
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
-        body { font-family: 'Outfit', sans-serif; background-color: #050B14; color: #e2e8f0; overflow-x: hidden; }
-        
-        /* Efecto Vidrio Premium */
-        .glass {
-            background: rgba(17, 25, 40, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        /* Gradientes animados para botones y textos */
-        .text-gradient {
-            background: linear-gradient(to right, #00f0ff, #0057ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-glow {
-            position: relative;
-        }
-        .btn-glow::before {
-            content: ""; position: absolute; inset: -2px; z-index: -1;
-            background: linear-gradient(to right, #00f0ff, #0057ff);
-            filter: blur(10px); opacity: 0; transition: opacity 0.3s ease;
-            border-radius: inherit;
-        }
-        .btn-glow:hover::before { opacity: 0.8; }
-    </style>
+    
 </head>
 <body class="antialiased relative">
 
@@ -67,7 +39,7 @@
             <a href="https://multiserviciosdonamado.com.ar/" target="_blank" class="block group relative rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/50 transition-all duration-500 cursor-pointer mb-10 w-full shadow-2xl" data-aos="fade-up">
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-2/3 h-72 md:h-[400px] relative overflow-hidden bg-gray-900">
-                        <img src="don_amado.png" alt="Multiservicios Don Amado" class="w-full h-full object-cover object-top grayscale brightness-50 opacity-70 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                        <img src="./assets/img/don_amado.png" alt="Multiservicios Don Amado" class="w-full h-full object-cover object-top grayscale brightness-50 opacity-70 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-900 via-gray-900/60 to-transparent"></div>
                     </div>
                     
@@ -102,7 +74,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 
                 <a href="https://neontechstore2.mitiendanube.com/" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="tienda_neon.png" alt="Neon Tech" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/tienda_neon.png" alt="Neon Tech" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-cyan-400 text-sm font-bold tracking-wider mb-2">E-COMMERCE TECH</span>
                         <h3 class="text-2xl font-bold text-white">Tienda Neon</h3>
@@ -110,7 +82,7 @@
                 </a>
 
                 <a href="#" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-pink-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="proyecto2.png" alt="Aura Minimal" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/proyecto2.png" alt="Aura Minimal" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-pink-400 text-sm font-bold tracking-wider mb-2">MODA & ESTÉTICA</span>
                         <h3 class="text-2xl font-bold text-white">Aura / Brasília</h3>
@@ -118,7 +90,7 @@
                 </a>
 
                 <a href="nova.html" target="_blank" class="block group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-500 cursor-pointer">
-                    <img src="nova.png" alt="Nova Consultores" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/img/nova.png" alt="Nova Consultores" class="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent flex flex-col justify-end p-6 opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-blue-400 text-sm font-bold tracking-wider mb-2">INSTITUCIONAL B2B</span>
                         <h3 class="text-2xl font-bold text-white">Nova Consultores</h3>
@@ -158,7 +130,7 @@
             
             <div data-aos="fade-left" data-aos-duration="1200" class="relative">
                 <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
-                <img src="tienda_neon.png" alt="Portfolio AAV Studio - Tienda Neon Tech" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:scale-105 transition-transform duration-500 rounded-2xl relative z-10" />
+                <img src="./assets/img/tienda_neon.png" alt="Portfolio AAV Studio - Tienda Neon Tech" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:scale-105 transition-transform duration-500 rounded-2xl relative z-10" />
                     
                 </div>
             </div>
@@ -279,11 +251,6 @@
         </div>
     </footer>
 
-    <script>
-        AOS.init({
-            once: true, // La animación ocurre solo una vez al bajar
-            offset: 100, // Empieza 100px antes de llegar al elemento
-        });
-    </script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
