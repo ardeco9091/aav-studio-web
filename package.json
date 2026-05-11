@@ -1,0 +1,28 @@
+{
+  "name": "agencia",
+  "version": "1.0.0",
+  "description": "> **\"Tu web no debería ser un gasto. Debe ser un motor de ventas.\"**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node node_modules/tailwindcss/lib/cli.js -i css/input.css -o css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardeco9091/aav-studio-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ardeco9091/aav-studio-web/issues"
+  },
+  "homepage": "https://github.com/ardeco9091/aav-studio-web#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14"
+  }
+}
