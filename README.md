@@ -19,9 +19,10 @@ El desarrollo de esta plataforma prioriza el rendimiento extremo, la optimizaci�
 ![Netlify](https://img.shields.io/badge/Netlify-050B14?style=for-the-badge&logo=netlify&logoColor=00C7B7)
 
 * **Framework CSS:** Tailwind CSS (Clases utilitarias para diseño a medida sin inflar el CSS).
-* **Animaciones:** IntersectionObserver + CSS (reemplazo ultra-ligero de AOS, ~2KB vs 30KB).
+* **Arquitectura:** Home comercial + páginas internas para servicios, casos y contacto.
+* **Animaciones:** IntersectionObserver + CSS (sin dependencia externa de AOS).
 * **Despliegue (CI/CD):** Netlify integrado con GitHub para automatización de builds.
-* **SEO:** Schema.json (LocalBusiness + Services), sitemap.xml y robots.txt.
+* **SEO:** Schema inline, sitemap.xml, robots.txt, canonicals y URLs limpias por intención de búsqueda.
 * **Accesibilidad:** WCAG 2.1 AA compliance, focus management, skip links.
 
 ---
@@ -33,6 +34,18 @@ Este portfolio exhibe nuestros desarrollos más recientes, incluyendo:
 * **Multiservicios Don Amado:** Arquitectura escalable y digitalización e-commerce para el sector de la construcción y herramientas. *(Último lanzamiento)*.
 * **Tienda Neon:** Plataforma de alto rendimiento optimizada para el nicho tecnológico y hardware.
 * **Nova Consultores:** Landing page B2B institucional corporativa.
+
+## 🧭 Estructura Comercial
+
+```text
+/
+/servicios/landing-pages/
+/servicios/ecommerce/
+/servicios/software-a-medida/
+/casos/don-amado/
+/casos/nova-consultores/
+/contacto/
+```
 
 ---
 

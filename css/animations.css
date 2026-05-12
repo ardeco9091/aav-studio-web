@@ -1,12 +1,29 @@
-/* Lightweight scroll animations to replace AOS */
-.aav-pre { opacity: 0; transition-property: opacity, transform; transition-duration: var(--aav-duration, 800ms); transition-timing-function: cubic-bezier(.22,1,.36,1); will-change: opacity, transform; }
-.aav-animate { opacity: 1; transform: none; }
+/* Lightweight scroll animations with a visible bottom-to-top reveal */
+.aav-pre {
+  opacity: 0;
+  transform: translate3d(0, 86px, 0);
+  transition:
+    opacity var(--aav-duration, 950ms) cubic-bezier(.16,1,.3,1),
+    transform var(--aav-duration, 950ms) cubic-bezier(.16,1,.3,1);
+  will-change: opacity, transform;
+}
 
-/* initial transforms for types */
-.aav-pre.aav-fade-up { transform: translateY(20px); }
-.aav-pre.aav-fade-left { transform: translateX(20px); }
-.aav-pre.aav-fade-right { transform: translateX(-20px); }
-.aav-pre.aav-zoom-in { transform: scale(0.96); }
+.aav-pre.aav-fade-right {
+  transform: translate3d(-96px, 0, 0);
+}
+
+.aav-pre.aav-fade-left {
+  transform: translate3d(96px, 0, 0);
+}
+
+.aav-pre.aav-zoom-in {
+  transform: translate3d(0, 70px, 0) scale(0.94);
+}
+
+.aav-pre.aav-animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
 
 /* Small accessibility consideration */
 @media (prefers-reduced-motion: reduce) {

@@ -1,12 +1,12 @@
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "name": "AAV Studio",
   "alternateName": "AAV Studio | Desarrollo Web Premium",
   "description": "Agencia de desarrollo digital especializada en E-Commerce y soluciones B2B de alto impacto",
-  "url": "https://aav-studio.netlify.app",
-  "logo": "https://aav-studio.netlify.app/./assets/img/miniatura.png",
-  "image": "https://aav-studio.netlify.app/./assets/img/miniatura.png",
+  "url": "https://aav-studio.netlify.app/",
+  "logo": "https://aav-studio.netlify.app/assets/img/miniatura.png",
+  "image": "https://aav-studio.netlify.app/assets/img/miniatura.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Salvador de Jujuy",
@@ -15,9 +15,9 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "contactType": "Customer Service",
+    "contactType": "sales",
     "telephone": "+54 388 867-5361",
-    "contactOption": "TollFree"
+    "availableLanguage": "es"
   },
   "sameAs": [
     "https://wa.me/5493888675361"
@@ -26,6 +26,7 @@
     {
       "@type": "Service",
       "name": "Landing Pages",
+      "url": "https://aav-studio.netlify.app/servicios/landing-pages/",
       "description": "Sitios institucionales ultra rápidos. Diseñados psicológicamente para capturar leads",
       "areaServed": "AR",
       "availableLanguage": "es"
@@ -33,6 +34,7 @@
     {
       "@type": "Service",
       "name": "E-Commerce",
+      "url": "https://aav-studio.netlify.app/servicios/ecommerce/",
       "description": "Tiendas online 24/7 con pasarelas de pago y logística automatizada",
       "areaServed": "AR",
       "availableLanguage": "es"
@@ -40,6 +42,7 @@
     {
       "@type": "Service",
       "name": "Software & APIs",
+      "url": "https://aav-studio.netlify.app/servicios/software-a-medida/",
       "description": "Sistemas a medida, integración ERP y automatización de procesos",
       "areaServed": "AR",
       "availableLanguage": "es"

@@ -7,9 +7,39 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aav-studio.netlify.app/nova.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://aav-studio.netlify.app/servicios/landing-pages/</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aav-studio.netlify.app/servicios/ecommerce/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aav-studio.netlify.app/servicios/software-a-medida/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aav-studio.netlify.app/casos/don-amado/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aav-studio.netlify.app/casos/nova-consultores/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aav-studio.netlify.app/contacto/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
