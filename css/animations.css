@@ -25,6 +25,13 @@
   transform: translate3d(0, 0, 0) scale(1);
 }
 
+@media (max-width: 767px) {
+  .aav-pre.aav-fade-left,
+  .aav-pre.aav-fade-right {
+    transform: translate3d(0, 56px, 0);
+  }
+}
+
 /* Small accessibility consideration */
 @media (prefers-reduced-motion: reduce) {
   .aav-pre { transition: none !important; transform: none !important; opacity: 1 !important; }
