@@ -1,6 +1,29 @@
 // Lightweight scroll-triggered animations (replaces AOS)
 document.addEventListener('DOMContentLoaded', () => {
   const nodes = Array.from(document.querySelectorAll('[data-aos]'));
+  const whatsappForm = document.querySelector('[data-whatsapp-form]');
+
+  if (whatsappForm) {
+    whatsappForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(whatsappForm);
+      const nombre = String(data.get('nombre') || '').trim();
+      const contacto = String(data.get('contacto') || '').trim();
+      const tipo = String(data.get('tipo') || '').trim();
+      const mensaje = String(data.get('mensaje') || '').trim();
+      const texto = [
+        'Hola AAV Studio, quiero hacer una consulta.',
+        '',
+        `Nombre: ${nombre}`,
+        `Contacto: ${contacto}`,
+        `Tipo de proyecto: ${tipo}`,
+        '',
+        `Mensaje: ${mensaje}`,
+      ].join('\n');
+      window.open(`https://wa.me/5493888675361?text=${encodeURIComponent(texto)}`, '_blank', 'noopener,noreferrer');
+    });
+  }
+
   if (nodes.length === 0) return;
 
   nodes.forEach(el => {
