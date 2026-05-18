@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /node_modules/
 Disallow: /.git/
-Disallow: /nova.html
 
 Sitemap: https://aav-studio.netlify.app/sitemap.xml
 
