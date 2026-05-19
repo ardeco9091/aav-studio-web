@@ -5,6 +5,7 @@ module.exports = {
     "./servicios/**/*.html",
     "./casos/**/*.html",
     "./contacto/**/*.html",
+    "./sobre-aav-studio/**/*.html",
     "./js/**/*.js",
   ],
   theme: {

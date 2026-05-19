@@ -20,6 +20,74 @@
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .nova-shadow { box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18); }
+        .aav-signature {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            background: rgba(15, 23, 42, 0.72);
+            color: #cbd5e1;
+            text-decoration: none;
+            overflow: hidden;
+            transition: border-color 220ms ease, background 220ms ease, transform 220ms ease;
+        }
+        .aav-signature::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(110deg, transparent 0%, rgba(96, 165, 250, 0.18) 42%, rgba(34, 211, 238, 0.22) 50%, transparent 60%);
+            transform: translateX(-110%);
+            animation: aavSignatureSweep 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .aav-signature:hover {
+            border-color: rgba(96, 165, 250, 0.58);
+            background: rgba(15, 23, 42, 0.94);
+            transform: translateY(-1px);
+        }
+        .aav-signature-mark {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(96, 165, 250, 0.35);
+            color: #bfdbfe;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+        }
+        .aav-signature-copy {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 2px;
+            text-align: left;
+        }
+        .aav-signature-label {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            font-weight: 700;
+        }
+        .aav-signature-name {
+            color: #f8fafc;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+        @keyframes aavSignatureSweep {
+            0%, 58% { transform: translateX(-110%); }
+            78%, 100% { transform: translateX(110%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .aav-signature::before { animation: none; display: none; }
+            .aav-signature { transition: none; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -164,9 +232,15 @@
     </main>
 
     <footer class="bg-slate-950 border-t border-white/10 py-10 text-slate-400">
-        <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between gap-4 text-sm">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm">
             <p>© 2026 Nova Consultores. Todos los derechos reservados.</p>
-            <a href="./" class="hover:text-white transition-colors">Desarrollado por AAV Studio</a>
+            <a href="https://aav-studio.netlify.app/" target="_blank" rel="noopener noreferrer" class="aav-signature" aria-label="Sitio diseñado y desarrollado por AAV Studio">
+                <span class="aav-signature-mark">AAV</span>
+                <span class="aav-signature-copy">
+                    <span class="aav-signature-label">Diseñado y desarrollado por</span>
+                    <span class="aav-signature-name">AAV.STUDIO</span>
+                </span>
+            </a>
         </div>
     </footer>
 </body>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Tienda Neon | AAV Studio</title>
+    <meta name="description" content="Caso de e-commerce tech para Tienda Neon: tienda online gamer, catálogo visual y experiencia mobile optimizada.">
+    <link rel="canonical" href="https://aav-studio.netlify.app/casos/tienda-neon/">
+    <meta property="og:title" content="Caso Tienda Neon | AAV Studio">
+    <meta property="og:description" content="E-commerce tech con estética gamer, catálogo visual y navegación pensada para conversión.">
+    <meta property="og:image" content="https://aav-studio.netlify.app/assets/img/tienda_neon.webp">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../css/output.css?v=20260513-1">
+    <link rel="stylesheet" href="../../css/styles.css?v=20260513-1">
+    <link rel="stylesheet" href="../../css/animations.css?v=20260513-1">
+    <link rel="stylesheet" href="../../css/accessibility.css?v=20260513-1">
+    <script src="../../js/app.js?v=20260513-1" defer></script>
+    <style>
+        .neon-footer-signature {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            border: 1px solid rgba(34, 211, 238, 0.28);
+            background: linear-gradient(135deg, rgba(8, 13, 28, 0.96), rgba(12, 7, 24, 0.96));
+            color: #e5faff;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 18px 36px -28px rgba(34, 211, 238, 0.75);
+            transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+        }
+        .neon-footer-signature::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, transparent 0%, rgba(34, 211, 238, 0.16) 38%, rgba(168, 85, 247, 0.18) 52%, transparent 68%);
+            transform: translateX(-120%);
+            animation: neonFooterSweep 5.8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .neon-footer-signature:hover {
+            border-color: rgba(34, 211, 238, 0.7);
+            transform: translateY(-1px);
+            box-shadow: 0 20px 42px -22px rgba(34, 211, 238, 0.55);
+        }
+        .neon-footer-mark,
+        .neon-footer-copy {
+            position: relative;
+            z-index: 1;
+        }
+        .neon-footer-mark {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(34, 211, 238, 0.5);
+            color: #67e8f9;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+        .neon-footer-label {
+            display: block;
+            color: #94a3b8;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .neon-footer-name {
+            display: block;
+            color: #f8fafc;
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+        }
+        @keyframes neonFooterSweep {
+            0%, 55% { transform: translateX(-120%); }
+            82%, 100% { transform: translateX(120%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .neon-footer-signature,
+            .neon-footer-signature::before {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Caso Tienda Neon","author":{"@type":"Organization","name":"AAV Studio"},"publisher":{"@type":"Organization","name":"AAV Studio"},"image":"https://aav-studio.netlify.app/assets/img/tienda_neon.webp","url":"https://aav-studio.netlify.app/casos/tienda-neon/"}
+    </script>
+</head>
+<body class="antialiased bg-black text-gray-300">
+    <a href="#main" class="skip-link">Ir al contenido principal</a>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-800" aria-label="Navegación principal">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../" class="text-2xl font-black tracking-tighter text-white">AAV<span class="text-cyan-400">.STUDIO</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
+                <a href="../../#portfolio" class="hover:text-cyan-400 transition-colors">Proyectos</a>
+                <a href="../../servicios/ecommerce/" class="hover:text-cyan-400 transition-colors">E-Commerce</a>
+                <a href="../../sobre-aav-studio/" class="hover:text-cyan-400 transition-colors">Sobre</a>
+                <a href="../../contacto/" class="hover:text-cyan-400 transition-colors">Contacto</a>
+            </div>
+            <a href="https://neontechstore2.mitiendanube.com/" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-colors">Ver live</a>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="pt-32 pb-20 lg:pt-44 bg-gray-950 border-b border-gray-800">
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <p class="text-cyan-400 text-xs font-bold tracking-[0.3em] uppercase mb-5">Caso e-commerce tech</p>
+                    <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-6">Tienda Neon: catálogo gamer con estética visual de alto impacto.</h1>
+                    <p class="text-xl text-gray-400 mb-10">Una tienda online para productos tech y hardware, pensada para destacar categorías visuales, facilitar navegación y llevar rápido al usuario hacia productos destacados.</p>
+                    <div class="grid grid-cols-3 gap-3 max-w-xl">
+                        <div class="bg-black border border-gray-800 rounded-xl p-4"><p class="text-cyan-400 font-black text-2xl">Live</p><p class="text-xs text-gray-500">Tiendanube</p></div>
+                        <div class="bg-black border border-gray-800 rounded-xl p-4"><p class="text-cyan-400 font-black text-2xl">UX</p><p class="text-xs text-gray-500">Catálogo visual</p></div>
+                        <div class="bg-black border border-gray-800 rounded-xl p-4"><p class="text-cyan-400 font-black text-2xl">Tech</p><p class="text-xs text-gray-500">Nicho gamer</p></div>
+                    </div>
+                </div>
+                <picture data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                    <source srcset="../../assets/img/tienda_neon.webp" type="image/webp">
+                    <img src="../../assets/img/tienda_neon.png" alt="Pantalla de Tienda Neon" class="rounded-2xl shadow-2xl shadow-cyan-950/30 border border-gray-800" width="1200" height="700" loading="eager" decoding="async">
+                </picture>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-8" data-aos="fade-up">
+                    <h2 class="text-2xl font-bold text-white mb-4">Problema</h2>
+                    <p class="text-gray-400">La tienda necesitaba una presencia visual diferenciada para productos de hardware, periféricos y gaming sin caer en una plantilla genérica.</p>
+                </article>
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="120">
+                    <h2 class="text-2xl font-bold text-white mb-4">Solución</h2>
+                    <p class="text-gray-400">Diseño oscuro, imágenes protagonistas, categorías claras y navegación directa para que el usuario detecte rápido productos relevantes.</p>
+                </article>
+                <article class="bg-gray-900/60 border border-gray-800 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="240">
+                    <h2 class="text-2xl font-bold text-white mb-4">Resultado</h2>
+                    <p class="text-gray-400">Una tienda online con identidad tech marcada, apta para campañas, catálogo dinámico y experiencia mobile más enfocada.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="relative overflow-hidden bg-black border-t border-cyan-950/60 py-12">
+        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+                <div>
+                    <p class="text-2xl font-black tracking-tight text-white">Tienda <span class="text-cyan-400">Neon</span></p>
+                    <p class="mt-4 max-w-sm text-sm leading-relaxed text-gray-400">E-commerce tech preparado para mostrar hardware, periféricos y productos gamer con una experiencia visual rápida, clara y enfocada en conversión.</p>
+                    <a href="https://neontechstore2.mitiendanube.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full bg-cyan-400 px-5 py-3 text-sm font-black text-black transition-colors hover:bg-white">Abrir tienda live</a>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-black uppercase tracking-[0.22em] text-white">Categorías</h3>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-500">
+                        <li>Teclados mecánicos</li>
+                        <li>Monitores gamer</li>
+                        <li>CPU y componentes</li>
+                        <li>Periféricos tech</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-black uppercase tracking-[0.22em] text-white">Compra</h3>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-500">
+                        <li>Catálogo visual</li>
+                        <li>Diseño mobile-first</li>
+                        <li>Checkout Tiendanube</li>
+                        <li>Consultas rápidas</li>
+                    </ul>
+                </div>
+
+                <div class="lg:text-right">
+                    <p class="text-sm font-black uppercase tracking-[0.22em] text-cyan-400">Tech commerce</p>
+                    <p class="mt-4 text-sm leading-relaxed text-gray-500">Una identidad oscura, precisa y comercial para productos de alto interés visual.</p>
+                    <a href="https://aav-studio.netlify.app/" target="_blank" rel="noopener noreferrer" class="neon-footer-signature mt-6" aria-label="E-commerce diseñado y desarrollado por AAV Studio">
+                        <span class="neon-footer-mark">AAV</span>
+                        <span class="neon-footer-copy">
+                            <span class="neon-footer-label">E-commerce por</span>
+                            <span class="neon-footer-name">AAV.STUDIO</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-10 border-t border-gray-900 pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-gray-600">
+                <p>© 2026 Tienda Neon. Caso presentado por AAV Studio.</p>
+                <div class="flex flex-wrap gap-x-5 gap-y-2">
+                    <a href="../../servicios/ecommerce/" class="hover:text-cyan-400 transition-colors">Servicio e-commerce</a>
+                    <a href="../../contacto/" class="hover:text-cyan-400 transition-colors">Cotizar tienda</a>
+                    <a href="../../" class="hover:text-cyan-400 transition-colors">Volver a AAV Studio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

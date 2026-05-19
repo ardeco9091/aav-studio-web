@@ -1,0 +1,96 @@
+<style>
+    /* Contenedor General */
+    .aav-wrap { 
+        margin-top: -30px; 
+        margin-bottom: 20px; 
+        font-family: 'Inter', -apple-system, sans-serif; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
+        max-width: 320px; 
+    }
+    
+    .aav-trust { 
+        display: flex; 
+        align-items: center; 
+        gap: 6px; 
+        opacity: 0.8; 
+        font-size: 11px; 
+        color: #a1a1aa; 
+        text-transform: uppercase; 
+        font-weight: 500; 
+    }
+
+    /* Estructura de la Tarjeta Terminal */
+    .aav-card {
+        background: #0a0a0a; 
+        border: 1px solid #222; 
+        border-left: 3px solid #00d4ff; 
+        padding: 12px 16px; 
+        border-radius: 0 12px 12px 0; 
+        text-decoration: none; 
+        display: flex; 
+        flex-direction: column;
+        transition: all 0.3s ease;
+    }
+    
+    .aav-card:hover {
+        border-color: #333;
+        box-shadow: 4px 4px 0 rgba(0, 212, 255, 0.15);
+    }
+
+    /* 1. Efecto de Tipeo (El comando ejecutándose) */
+    .aav-title {
+        font-size: 10px; 
+        color: #00d4ff; 
+        font-family: 'Courier New', Courier, monospace; 
+        letter-spacing: 1px; 
+        font-weight: 600; 
+        margin-bottom: 4px;
+        overflow: hidden; 
+        white-space: nowrap; 
+        /* 18ch es exactamente la cantidad de letras de "sudo ./quantum_eng" */
+        animation: typeCommand 4s steps(18, end) infinite;
+    }
+
+    @keyframes typeCommand { 
+        0%, 15% { width: 0; } 
+        75%, 100% { width: 18ch; } 
+    }
+
+    /* 2. Efecto Block Cursor (El nombre esperando input) */
+    .aav-name {
+        font-size: 18px; 
+        font-weight: 800; 
+        color: #fff; 
+        display: flex; 
+        align-items: center;
+        letter-spacing: -0.2px;
+    }
+
+    .aav-block {
+        display: inline-block; 
+        width: 10px; 
+        height: 18px; 
+        background: #00d4ff; 
+        margin-left: 6px; 
+        animation: blockBlink 1s step-end infinite;
+    }
+
+    @keyframes blockBlink { 
+        50% { opacity: 0; } 
+    }
+</style>
+
+<div class="aav-wrap">
+    <div class="aav-trust">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Operaciones optimizadas y seguras</span>
+    </div>
+    
+    <a href="https://aav-studio.netlify.app/" target="_blank" class="aav-card">
+        <span class="aav-title">sudo ./quantum_eng</span>
+        <span class="aav-name">AAV_STUDIO<span class="aav-block"></span></span>
+    </a>
+</div>
+
