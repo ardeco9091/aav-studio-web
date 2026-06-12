@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IES N°9 Academy | Impulsá tu carrera tech con IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#00e676', // Verde neón más brillante
+                        dark: '#0a0f1e', // Fondo casi negro azulado profundo
+                        card: 'rgba(28, 45, 81, 0.5)', // Fondo tarjetas con transparencia
+                        accent: '#ff0055' // Acento rosa/rojo para alertas IA
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        mono: ['Fira Code', 'monospace'], // Fuente mono para cosas tech
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos CSS personalizados para el nivel DIOS */
+        
+        /* Efecto Glassmorphism */
+        .glass {
+            background: rgba(28, 45, 81, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Brillo neón para el resaltado IA */
+        .ai-glow {
+            border-color: #00e676 !important;
+            box-shadow: 0 0 40px rgba(0, 230, 118, 0.8) !important;
+            transform: scale(1.03);
+            transition: all 0.5s ease;
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animación de pulso para el estado de la IA */
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.95); }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Spinner de carga */
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #00e676;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans antialiased selection:bg-brand selection:text-dark">
+    
+    <nav class="glass p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-3xl font-extrabold tracking-tighter text-white">IES  N°9<span class="text-brand"> Academy</span></div>
+            <div class="flex items-center gap-2 text-xs font-mono text-gray-400">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-brand"></span>
+                </span>
+                Model v4.2 Alpha | Active
+            </div>
+            <div class="flex items-center gap-6 text-sm text-gray-300">
+                <a href="https://wa.me/tunumerodecelular?text=Hola,%20quiero%20info" target="_blank" class="bg-gray-800 hover:bg-gray-700 font-semibold py-2 px-4 rounded-full transition">Soporte Humano</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-4 py-24 text-center">
+        <div class="bg-gray-800 text-brand text-xs font-mono inline-block px-4 py-1 rounded-full mb-4 border border-gray-700">CIENCIA DE DATOS & IA APLICADA</div>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">Optimización del<br><span class="text-brand">Aprendizaje Tech</span></h1>
+        <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">Tutorías personalizadas y laboratorios basados en modelos de comportamiento para maximizar tu conversión profesional.</p>
+        <a href="#rutas" class="inline-block bg-brand hover:bg-emerald-300 text-dark font-bold py-4 px-10 rounded-full transition transform hover:scale-105 shadow-[0_0_20px_rgba(0,230,118,0.5)] text-lg">Explorar Modelos</a>
+    </header>
+
+    <section class="container mx-auto px-4 py-16 mb-16">
+        <div class="glass max-w-4xl mx-auto rounded-3xl p-10 border border-gray-700 relative overflow-hidden shadow-2xl">
+            <div class="absolute -top-10 -right-10 text-brand opacity-10 text-9xl font-extrabold rotate-12">IA</div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10 relative z-10">
+                <div class="flex-grow text-center md:text-left">
+                    <h3 class="text-3xl font-extrabold text-white tracking-tight mb-2">IES N°9 <span class="text-brand">Juana Azurduy</span></h3>
+                    <p class="text-gray-400 text-base mb-6 font-light">Contame qué te interesa o qué problema querés resolver y nuestro modelo te recomendará la mejor ruta de aprendizaje para vos.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="text" id="ai-input" placeholder="Ej: 'Me interesan los números y Python' o 'Quiero hackear'" class="flex-grow bg-dark/50 border border-gray-700 rounded-lg px-4 py-3 text-sm text-gray-100 placeholder:text-gray-600 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition">
+                        
+                        <button onclick="simularAnalisisIA()" id="ai-button" class="bg-dark hover:bg-gray-800 text-brand border border-brand font-semibold px-6 py-3 rounded-lg transition flex items-center justify-center gap-2 group whitespace-nowrap">
+                            <div id="ai-loader" class="loader hidden"></div>
+                            <span id="ai-button-text">Analizar con IA</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rutas" class="container mx-auto px-4 py-20 bg-card rounded-t-[3rem] border-t border-gray-800 relative shadow-[0_-15px_30px_rgba(10,15,30,0.8)]">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-extrabold text-white mb-4 tracking-tighter">Rutas de Especialización</h2>
+            <p class="text-gray-400 text-lg max-w-lg mx-auto font-light">Ecosistemas diseñados para la adquisición de habilidades de alto valor.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            
+            <div id="ruta-data" class="course-card bg-dark rounded-3xl border border-gray-800 overflow-hidden group flex flex-col transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop" alt="Python & Datos" class="h-52 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 font-mono">
+                        <span class="bg-emerald-950 text-brand text-xs font-semibold px-3 py-1 rounded-full border border-emerald-800">Data Science</span>
+                        <span class="bg-gray-800 text-gray-400 text-xs px-3 py-1 rounded-full border border-gray-700">CORE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white leading-snug">Tutoría: Automatización y Análisis con Python</h3>
+                    <p class="text-gray-400 text-base mb-8 flex-grow leading-relaxed font-light">Limpieza y procesamiento de datos, modelado predictivo y fundamentos aplicados de Machine Learning en entornos reales.</p>
+                    <a href="https://wa.me/tunumerodecelular?text=Hola,%20quiero%20info%20sobre%20la%20Ruta%20de%20Python" target="_blank" class="block w-full text-center bg-brand hover:bg-emerald-300 text-dark font-bold py-3.5 rounded-xl transition duration-300 text-lg">Solicitar Acceso</a>
+                </div>
+            </div>
+
+            <div id="ruta-cyber" class="course-card bg-dark rounded-3xl border border-gray-800 overflow-hidden flex flex-col relative transition-all duration-300">
+                <div class="absolute top-5 right-5 bg-accent text-white text-xs font-bold px-4 py-1.5 rounded-full z-10 font-mono tracking-widest animate-pulse-soft">CRÍTICO</div>
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop" alt="Laboratorio Red Team" class="h-52 w-full object-cover">
+                
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 font-mono">
+                        <span class="bg-red-950 text-red-400 text-xs font-semibold px-3 py-1 rounded-full border border-red-800">Offensive Security</span>
+                        <span class="bg-gray-800 text-gray-400 text-xs px-3 py-1 rounded-full border border-gray-700">ADVANCED</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white leading-snug">Laboratorio Red Team y Vulnerabilidades</h3>
+                    <p class="text-gray-400 text-base mb-8 flex-grow leading-relaxed font-light">Simulación de ataques controlados. Vemos inyecciones SQLi, análisis de red y metodologías de seguridad ofensiva basadas en datos.</p>
+                    <a href="https://wa.me/tunumerodecelular?text=Hola,%20quiero%20info%20sobre%20el%20Laboratorio%20Red%20Team" target="_blank" class="block w-full text-center bg-brand hover:bg-emerald-300 text-dark font-bold py-3.5 rounded-xl transition duration-300 text-lg">Reservar Lab</a>
+                </div>
+            </div>
+
+            <div id="ruta-web" class="course-card bg-dark rounded-3xl border border-gray-800 overflow-hidden flex flex-col transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" alt="Arquitectura E-commerce" class="h-52 w-full object-cover">
+                
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 font-mono">
+                        <span class="bg-blue-950 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-800">Architecture / Cloud</span>
+                        <span class="bg-gray-800 text-gray-400 text-xs px-3 py-1 rounded-full border border-gray-700">CORE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white leading-snug">Consultoría en Arquitectura E-commerce & SaaS</h3>
+                    <p class="text-gray-400 text-base mb-8 flex-grow leading-relaxed font-light">Asesoramiento técnico de alto nivel. Auditoría de código, maquetación UI/UX avanzada y configuración de infraestructuras escalables.</p>
+                    <a href="https://wa.me/tunumerodecelular?text=Hola,%20quiero%20info%20sobre%20la%20Consultoría%20E-commerce" target="_blank" class="block w-full text-center bg-brand hover:bg-emerald-300 text-dark font-bold py-3.5 rounded-xl transition duration-300 text-lg">Agendar Asesoría</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-card border-t border-gray-800 py-16 px-4 text-center">
+        <div class="text-2xl font-extrabold text-white mb-4">Juana Azurduy <span class="text-brand"> Academy</span></div>
+        <p class="text-gray-500 text-sm max-w-xl mx-auto font-light leading-relaxed mb-6">Proyecto de investigación y desarrollo presentado para la feria de ciencias de la carrera de Ciencia de Datos e Inteligencia Artificial.</p>
+        <div class="text-xs font-mono text-gray-600">&copy; 2026 Ariel Artur de la Villarmois - AAV Studio</div>
+    </footer>
+
+    <script>
+        function simularAnalisisIA() {
+            // Referencias a elementos de la UI
+            const input = document.getElementById('ai-input').value.trim().toLowerCase();
+            const loader = document.getElementById('ai-loader');
+            const buttonText = document.getElementById('ai-button-text');
+            const button = document.getElementById('ai-button');
+            const resultGrid = document.getElementById('rutas');
+
+            // Validación básica
+            if (input === "") {
+                alert("Por favor, contanos algo para que la IA pueda analizarte.");
+                return;
+            }
+
+            // --- FASE 1: SIMULAR "PROCESAMIENTO" (Wow factor) ---
+            
+            // Deshabilitar botón y mostrar spinner
+            button.disabled = true;
+            loader.classList.remove('hidden');
+            buttonText.innerText = "Analizando (Modelo v4.2)...";
+
+            // Limpiar cualquier resaltado previo de las tarjetas
+            document.querySelectorAll('.course-card').forEach(card => {
+                card.classList.remove('ai-glow');
+            });
+
+            // Simulamos 2.5 segundos de "pensamiento" profundo de la IA
+            setTimeout(() => {
+                
+                // Restablecer botón
+                button.disabled = false;
+                loader.classList.add('hidden');
+                buttonText.innerText = "Ver Recomendación AI";
+
+                // --- FASE 2: MODELO DE RECOMENDACIÓN (Lógica MVP) ---
+                // Leemos palabras clave básicas del input del profesor
+                
+                let targetCardId = 'ruta-data'; // Por defecto, si no entiende nada, recomienda datos.
+
+                // Lógica de palabras clave (esto es lo que vendés como "algoritmo inicial")
+                if (input.includes('seguridad') || input.includes('hack') || input.includes('servidor') || input.includes('ciber') || input.includes('laboratorio')) {
+                    targetCardId = 'ruta-cyber';
+                } else if (input.includes('web') || input.includes('tienda') || input.includes('ecommerce') || input.includes('nube') || input.includes('sass')) {
+                    targetCardId = 'ruta-web';
+                } else if (input.includes('python') || input.includes('datos') || input.includes('data') || input.includes('machine') || input.includes('numero')) {
+                    targetCardId = 'ruta-data';
+                }
+
+                // --- FASE 3: UI DE RESULTADOS (Interactivad Dios) ---
+                const targetCard = document.getElementById(targetCardId);
+                
+                // 1. Scrolleo suave automático hasta la sección de cursos
+                resultGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // 2. Esperamos un cachito a que termine el scroll y aplicamos el efecto neón
+                setTimeout(() => {
+                    targetCard.classList.add('ai-glow');
+                }, 800);
+
+            }, 2500); // 2.5 segundos de delay para efecto dramático
+        }
+    </script>
+
+</body>
+</html>
