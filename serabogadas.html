@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saera Abogadas - Urgencias Penales 24hs</title>
+    <style>
+        /* Variables de Diseño - Paleta Corporativa Legal */
+        :root {
+            --primary-color: #0b1325;     
+            --secondary-color: #1c2541;   
+            --accent-color: #c5a059;      
+            --accent-hover: #b38f46;      
+            --bg-light: #f8f9fa;          
+            --bg-warm: #fdfbf7;           
+            --text-dark: #212529;         
+            --text-muted: #6c757d;        
+            --text-light: #ffffff;        
+            --success-color: #25d366;     
+            --font-headings: 'Playfair Display', Georgia, serif;
+            --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Estilos Generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-headings);
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            color: var(--text-light);
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-family: var(--font-headings);
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: var(--accent-color);
+        }
+
+        .urgent-badge {
+            background-color: #dc3545;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(11, 19, 37, 0.9), rgba(28, 37, 65, 0.93));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            color: #d1d5db;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba56;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp svg {
+            fill: currentColor;
+            width: 22px;
+            height: 22px;
+        }
+
+        /* Sección de Servicios */
+        .services {
+            padding: 80px 0;
+            background-color: var(--bg-warm);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--text-light);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .service-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Banner de Modalidad Online */
+        .online-consultations {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.3);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .online-consultations h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .online-consultations p {
+            font-size: 16px;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #e5e7eb;
+        }
+
+        .platform-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-tag {
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sección de Contacto Directo / Perfil */
+        .contact-cta {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        /* Imagen de Perfil (Reemplaza al monograma) */
+        .avatar-holder {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden; /* Esto asegura que la imagen quede redonda */
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen sin deformarla */
+            object-position: center;
+        }
+
+        .contact-cta h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .phone-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer p span {
+            color: var(--accent-color);
+        }
+
+        /* Animaciones */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .profile-container { padding: 30px 20px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container navbar-brand">
+            <div class="logo-text">SAERA <span>ABOGADAS</span></div>
+            <div class="urgent-badge">Urgencias 24hs</div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <span class="hero-badge">Estudio Jurídico Especializado</span>
+            <h1>URGENCIAS PENALES LAS 24 HS</h1>
+            <p>Protegemos tu libertad y defendemos tus derechos de manera inmediata. Respuestas estratégicas y representación legal de alta complejidad cuando más lo necesitás.</p>
+            <a href="https://wa.me/5491134121111?text=Hola.%20Necesito%20asistencia%20legal%20urgente." class="btn btn-whatsapp" target="_blank">
+                <!-- Icono oficial de WhatsApp SVG -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.012c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+                Contactar a Abogada de Guardia
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios Profesionales</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Servicio 1: Balanza -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                            <path d="M2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                            <path d="M7 21h10"/>
+                            <path d="M12 3v18"/>
+                            <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+                        </svg>
+                    </div>
+                    <h3>Asesoramiento Legal</h3>
+                    <p>Brindamos información precisa y orientación estratégica al cliente sobre sus derechos y obligaciones legales ante cualquier escenario crítico.</p>
+                </div>
+                
+                <!-- Servicio 2: Edificio/Tribunal -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="22" y2="22"/>
+                            <line x1="6" x2="6" y1="18" y2="11"/>
+                            <line x1="10" x2="10" y1="18" y2="11"/>
+                            <line x1="14" x2="14" y1="18" y2="11"/>
+                            <line x1="18" x2="18" y1="18" y2="11"/>
+                            <polygon points="12 2 20 7 4 7"/>
+                        </svg>
+                    </div>
+                    <h3>Representación Legal</h3>
+                    <p>En caso de que el cliente necesite ir a juicio o enfrentar un proceso legal, asumimos su representación técnica para defender sus intereses con firmeza en la corte.</p>
+                </div>
+                
+                <!-- Servicio 3: Documento y Pluma -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <path d="M10.42 12.61a2.1 2.1 0 1 1 2.97 2.97L7.95 21 4 22l.99-3.95 5.43-5.44Z"/>
+                        </svg>
+                    </div>
+                    <h3>Redacción de Documentos</h3>
+                    <p>Confeccionamos con rigurosidad técnica todo tipo de documentos legales: contratos, testamentos, poderes notariales, recursos y apelaciones, garantizando el cumplimiento estricto de los requisitos de la ley.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER CONSULTAS ONLINE -->
+    <section class="online-consultations">
+        <div class="container">
+            <h2>Consultas Online Disponibles</h2>
+            <p>Atendemos con flexibilidad y total confidencialidad desde cualquier punto del país a través de canales digitales integrados.</p>
+            <div class="platform-badges">
+                <div class="platform-tag">Video Llamada Directa</div>
+                <div class="platform-tag">Zoom</div>
+                <div class="platform-tag">Microsoft Teams</div>
+                <div class="platform-tag">WhatsApp Video</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO Y PERFIL -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="profile-container">
+                
+                <!-- Aquí se carga la imagen de WhatsApp (La diosa Temis) -->
+                <div class="avatar-holder">
+                    <img src="perfil-whatsapp.png" alt="Perfil Saera Abogadas" class="profile-img">
+                </div>
+                
+                <h3>Saera Abogadas</h3>
+                <p>Atención directa y urgente. Agendá o comunicate de inmediato al:</p>
+                <div class="phone-display">+54 9 11 3412-1111</div>
+                
+                <a href="https://wa.me/5491134121111?text=Hola.%20Necesito%20asistencia%20legal%20urgente." class="btn btn-whatsapp" target="_blank">
+                    <!-- Icono oficial de WhatsApp SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.012c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    Iniciar Consulta Inmediata
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span>Saera Abogadas</span>. Todos los derechos reservados. Defensa Penal de Alta Complejidad.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

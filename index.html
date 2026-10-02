@@ -63,32 +63,44 @@
     <meta name="description" content="AAV Studio | Agencia de desarrollo web. Tiendas online, landing pages y soluciones B2B de alto impacto en Jujuy, Argentina." />
     <meta name="keywords" content="desarrollo web, e-commerce, landing pages, tienda online, Jujuy, integraciones ERP" />
     
-    <script src="./js/app.js?v=20260513-1" defer></script>
+    <script src="./js/app.js?v=20261002-1" defer></script>
 </head>
 <body class="antialiased relative bg-black text-gray-300">
     <a href="#main" class="skip-link">Ir al contenido principal</a>
 
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-gray-800" role="navigation" aria-label="Navegación principal">
+    <nav class="site-nav fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-gray-800" role="navigation" aria-label="Navegación principal">
         <div class="container mx-auto px-5 md:px-6 py-4 flex justify-between items-center">
              <a href="#" class="text-2xl font-black tracking-tighter text-white" aria-label="AAV Studio - Inicio">
                 AAV<span class="text-cyan-400">.STUDIO</span>
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
                 <a href="#portfolio" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Proyectos</a>
                 <a href="#servicios" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Servicios</a>
                 <a href="./sobre-aav-studio/" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Sobre</a>
-                <a href="./casos/don-amado/" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Caso Don Amado</a>
+                <a href="./casos/ferreteria-marcos/" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Caso Ferretería</a>
                 <a href="#contacto" class="hover:text-cyan-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">Contacto</a>
             </div>
             <a href="https://wa.me/5493888675361" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" aria-label="Contactar por WhatsApp">Hablemos</a>
+            <button type="button" class="mobile-menu-toggle md:hidden inline-flex items-center justify-center rounded-xl border border-gray-700 p-3 text-gray-200 hover:border-cyan-400 hover:text-cyan-400 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-800 bg-gray-950/95 px-5 pb-5 pt-3">
+            <div class="flex flex-col gap-1 text-sm font-semibold text-gray-300">
+                <a href="#portfolio" class="rounded-lg px-3 py-3 hover:bg-white/5 hover:text-cyan-400">Proyectos</a>
+                <a href="#servicios" class="rounded-lg px-3 py-3 hover:bg-white/5 hover:text-cyan-400">Servicios</a>
+                <a href="./sobre-aav-studio/" class="rounded-lg px-3 py-3 hover:bg-white/5 hover:text-cyan-400">Sobre AAV Studio</a>
+                <a href="./casos/ferreteria-marcos/" class="rounded-lg px-3 py-3 hover:bg-white/5 hover:text-cyan-400">Caso Ferretería Marcos</a>
+                <a href="#contacto" class="mt-2 rounded-xl bg-cyan-400 px-4 py-3 text-center font-bold text-black">Hablemos</a>
+            </div>
         </div>
     </nav>
 
     <section id="main" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden z-10 bg-gray-950">
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" data-aos-duration="1000">
-                <div class="inline-block py-1 px-3 rounded-full border border-cyan-800 bg-cyan-900/30 text-cyan-400 text-xs font-bold mb-6 tracking-widest uppercase">
-                    Agencia de Desarrollo B2B
+                <div class="inline-flex items-center gap-2 py-1 px-3 rounded-full border border-cyan-800 bg-cyan-900/30 text-cyan-400 text-xs font-bold mb-6 tracking-widest uppercase">
+                    <span class="status-dot" aria-hidden="true"></span> Agencia de Desarrollo B2B
                 </div>
                 <h1 class="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
                     Tu web no debería ser un gasto...
@@ -103,6 +115,11 @@
                     <a href="#servicios" class="glass text-white font-bold py-4 px-8 rounded-full text-center hover:bg-white/10 transition-colors border border-gray-700">
                         Ver Servicios
                     </a>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-mono uppercase tracking-widest text-gray-500">
+                    <span><strong class="text-cyan-400">UI/UX</strong> con propósito</span>
+                    <span><strong class="text-cyan-400">Mobile-first</strong></span>
+                    <span><strong class="text-cyan-400">Tiendanube</strong> + integraciones</span>
                 </div>
             </div>
             
@@ -166,7 +183,41 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="case-card case-card--featured relative lg:col-span-2 bg-gray-950 rounded-xl border border-cyan-800/70 overflow-hidden group flex flex-col lg:flex-row h-full transition-all duration-300 shadow-xl shadow-cyan-950/20" data-aos="fade-up">
+                    <div class="relative lg:w-1/2 p-2 bg-gray-900 border-b lg:border-b-0 lg:border-r border-gray-800 overflow-hidden">
+                        <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-900 rounded-t-lg mb-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+                            <span class="ml-2 text-[10px] text-cyan-500 font-mono tracking-widest uppercase">live_case / 2026</span>
+                        </div>
+                        <div class="case-preview case-preview--ferreteria aspect-video lg:aspect-auto lg:h-[calc(100%-2.75rem)] relative overflow-hidden rounded bg-black">
+                            <img src="https://acdn-us.mitiendanube.com/stores/007/853/070/themes/amazonas/2-slide-1790030882867-7565568639-884d8cce495a1b43e57f3b6d44e661711790030882-1920-1920.webp?8290397179349384007" alt="Tienda online de Ferretería Marcos en Tiendanube" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-cyan-950/10"></div>
+                            <span class="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/60 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur">Tienda online</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-grow flex-col justify-between p-7 lg:w-1/2 lg:p-8">
+                        <div>
+                            <div class="mb-4 flex items-center gap-3"><span class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">Nuevo caso</span><span class="h-px flex-1 bg-cyan-900/60"></span></div>
+                            <h3 class="text-2xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">Ferretería Marcos</h3>
+                            <p class="mt-2 mb-4 text-sm font-medium text-cyan-500 font-mono tracking-tight">E-commerce / Tiendanube + UI/UX</p>
+                            <p class="mb-6 text-sm leading-relaxed text-gray-400">Una tienda de herramientas, electricidad y hogar con promociones claras, compra rápida y una identidad visual que transmite confianza desde el primer scroll.</p>
+                            <div class="grid grid-cols-2 gap-3 text-xs font-mono text-gray-400">
+                                <div class="rounded-lg border border-gray-800 bg-black/70 p-3"><span class="block text-cyan-400">› Conversión</span><span>Compra guiada</span></div>
+                                <div class="rounded-lg border border-gray-800 bg-black/70 p-3"><span class="block text-cyan-400">› Plataforma</span><span>Tiendanube</span></div>
+                                <div class="rounded-lg border border-gray-800 bg-black/70 p-3"><span class="block text-cyan-400">› Catálogo</span><span>Herramientas + hogar</span></div>
+                                <div class="rounded-lg border border-gray-800 bg-black/70 p-3"><span class="block text-cyan-400">› Zona</span><span>San Pedro, Jujuy</span></div>
+                            </div>
+                        </div>
+                        <div class="mt-7 flex flex-wrap items-center gap-4 border-t border-gray-800 pt-5">
+                            <a href="https://www.ferreteriamarcos.com.ar/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 text-xs font-bold text-black transition-colors hover:bg-white">Ver tienda en vivo <span aria-hidden="true">↗</span></a>
+                            <a href="./casos/ferreteria-marcos/" class="text-xs font-mono text-gray-400 hover:text-cyan-400 transition-colors">[ ver_caso ]</a>
+                        </div>
+                    </div>
+                </article>
+
                 <div class="bg-gray-950 rounded-xl border border-gray-800 overflow-hidden group flex flex-col h-full hover:border-cyan-800/50 transition-all duration-300 shadow-xl shadow-black/30" data-aos="fade-up">
                     <div class="relative p-2 bg-gray-900 border-b border-gray-800 overflow-hidden">
                         <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-900 rounded-t-lg mb-2">
@@ -285,6 +336,43 @@
                                 [ abrir_sitio ]
                             </a>
                             <a href="./casos/nova-consultores/" class="text-xs font-mono text-gray-500 hover:text-cyan-400 transition-colors whitespace-nowrap">[ ver_caso ]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-950 rounded-xl border border-gray-800 overflow-hidden group flex flex-col h-full hover:border-cyan-800/50 transition-all duration-300 shadow-xl shadow-black/30" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative p-2 bg-gray-900 border-b border-gray-800 overflow-hidden">
+                        <div class="flex items-center gap-1.5 px-3 py-2 border-b border-gray-800 bg-gray-900 rounded-t-lg mb-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-800"></span>
+                            <span class="ml-2 text-[10px] text-gray-600 font-mono tracking-widest uppercase">software.local</span>
+                        </div>
+                        <div class="aspect-video relative overflow-hidden rounded bg-black">
+                            <img src="./assets/img/frutem-monitor.png" alt="Sistema Frut&amp;Em - monitor de personal con fichadas y estados" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.72] grayscale-[0.15] transition-all duration-500 group-hover:scale-105 group-hover:brightness-100 group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-cyan-950/20 mix-blend-overlay z-10 pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-5 flex-grow">
+                            <h3 class="text-xl font-bold text-white mb-2 tracking-tight group-hover:text-cyan-400 transition-colors">Sistema Frut&amp;Em</h3>
+                            <p class="text-sm font-medium text-cyan-500 mb-4 font-mono tracking-tight">RRHH + Caja / Software a Medida</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-5">
+                                Aplicacion de escritorio para control de personal, fichadas, liquidacion de sueldos, stock y caja con reportes exportables.
+                            </p>
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-3 bg-black p-4 rounded-lg border border-gray-800 font-mono text-xs text-gray-400">
+                                <p>&gt; Fichadas: <span class="text-green-400">Biometrico</span></p>
+                                <p>&gt; Caja: <span class="text-white">Ventas</span></p>
+                                <p>&gt; Reportes: <span class="text-cyan-400">XLS/PDF/TXT</span></p>
+                                <p>&gt; Status: <span class="text-white">Desktop</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-3 pt-5 border-t border-gray-800">
+                            <a href="./servicios/software-a-medida/" class="text-xs font-mono text-gray-500 hover:text-cyan-400 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                [ software ]
+                            </a>
+                            <a href="./casos/frutem-rrhh/" class="text-xs font-mono text-gray-500 hover:text-cyan-400 transition-colors whitespace-nowrap">[ ver_caso ]</a>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   const nodes = Array.from(document.querySelectorAll('[data-aos]'));
   const whatsappForm = document.querySelector('[data-whatsapp-form]');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.querySelector('#mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      mobileMenu.classList.toggle('hidden', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
+  }
 
   if (whatsappForm) {
     whatsappForm.addEventListener('submit', event => {
