@@ -4,6 +4,9 @@
         html { background-color: #050B14; }
         body { font-family: 'Outfit', sans-serif; background-color: #050B14; color: #e2e8f0; }
 
+        /* Evita que la navegación fija tape los títulos al usar anclas internas. */
+        section[id], footer[id] { scroll-margin-top: 6.5rem; }
+
         .site-nav {
             background: rgba(5, 11, 20, 0.78);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
